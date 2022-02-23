@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const processEnv = require('dotenv');
 const typeDefs = require('./graphql/TypeDefs/typeDefs');
 const resolvers = require('./graphql/Resolvers/resolvers');  
-processEnv.config();
+processEnv.config({path:'./process.env'});
 
 
 const server = new ApolloServer({
