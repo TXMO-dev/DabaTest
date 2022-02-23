@@ -4,7 +4,7 @@ const jwt = require('jsonwebtoken');
 const authContext = require('../../../utilities/authContext');
 const {UserInputError} = require('apollo-server');
 const {validateRegisterInput,validateLoginInput} = require('./../../../utilities/validations');
-const config = require('../../../config');
+const config = require('./../../../config');
 module.exports = {
     Mutation:{
         register: async (_,{registerUser:{name,email,password,confirmPassword,phone}}) => {
