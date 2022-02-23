@@ -1,21 +1,15 @@
 const {ApolloServer} = require('apollo-server');
-const gql = require('graphql-tag');
 const mongoose = require('mongoose');
 const processEnv = require('dotenv');
+const typeDefs = require('./graphql/TypeDefs/typeDefs');
+const resolvers = require('./graphql/Resolvers/resolvers');  
 processEnv.config();
-const typeDefs = gql`
-    type Query{
-        sayHi: String!
-    }
-`;
-const resolvers = {
-    Query:{
-        sayHi: _ => "Say hello form timothy"
-    }
-}
+
+
 const server = new ApolloServer({
     typeDefs,
-    resolvers
+    resolvers,
+    context: ({req}) => ({req}) 
 });
 
 mongoose.connect(`${process.env.DATABASE_URL}`,{useNewUrlParser: true})

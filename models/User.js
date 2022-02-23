@@ -7,7 +7,8 @@ const userSchema = new Schema({
     bio: String,
     photo: String,
     phone: String,
-    recentlySignedIn: String
+    recentlySignedIn: String,
+    createdAt: String  
 });
 
 module.exports = model('User',userSchema);
