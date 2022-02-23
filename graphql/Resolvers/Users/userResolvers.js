@@ -4,7 +4,6 @@ const jwt = require('jsonwebtoken');
 const authContext = require('../../../utilities/authContext');
 const {UserInputError} = require('apollo-server');
 const {validateRegisterInput,validateLoginInput} = require('./../../../utilities/validations');
-const config = require('../../../config');
 module.exports = {
     Mutation:{
         register: async (_,{registerUser:{name,email,password,confirmPassword,phone}}) => {
@@ -34,8 +33,8 @@ module.exports = {
                 id: result.id,
                 email: result.email,
                 phone: result.phone
-            },"this-is-my-secret-for-Daba",{
-                expiresIn: '90d'
+            },process.env.TOKEN_SECRET,{
+                expiresIn: '1h'
             });
             return {
                 ...result._doc,
@@ -65,8 +64,8 @@ module.exports = {
                 id: user.id,
                 email: user.email,
                 phone: user.phone  
-            },"this-is-my-secret-for-Daba",{
-                expiresIn: '90d'
+            },process.env.TOKEN_SECRET,{
+                expiresIn: '1h'
             });
             return {
                 ...user._doc,
