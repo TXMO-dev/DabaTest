@@ -3,7 +3,6 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const authContext = require('../../../utilities/authContext');
 const {UserInputError} = require('apollo-server');
-const config = require('../../../config/config');
 const {validateRegisterInput,validateLoginInput} = require('./../../../utilities/validations');
 module.exports = {
     Mutation:{
@@ -34,7 +33,7 @@ module.exports = {
                 id: result.id,
                 email: result.email,
                 phone: result.phone
-            },config.TOKEN_SECRET,{
+            },process.env.TOKEN_SECRET,{
                 expiresIn: '1h'
             });
             return {
@@ -65,9 +64,9 @@ module.exports = {
                 id: user.id,
                 email: user.email,
                 phone: user.phone  
-            },config.TOKEN_SECRET,{
-                expiresIn: '1h'  
-            });  
+            },process.env.TOKEN_SECRET,{
+                expiresIn: '1h'
+            });
             return {
                 ...user._doc,
                 id:user._id,
