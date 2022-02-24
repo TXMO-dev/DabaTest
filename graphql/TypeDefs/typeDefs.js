@@ -4,11 +4,8 @@ module.exports = gql`
         getUser: UserInfo
     }
     input RegisterInput{
-        name: String!
         email: String!
-        password: String!
-        confirmPassword: String!
-        phone: String!   
+        password: String! 
 
     }
     input LoginInput{
@@ -31,6 +28,7 @@ module.exports = gql`
         email:String
         bio:String
         phone:String
+        password:String
     }
 
     type User {

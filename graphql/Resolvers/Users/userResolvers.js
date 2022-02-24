@@ -6,7 +6,7 @@ const {UserInputError} = require('apollo-server');
 const {validateRegisterInput,validateLoginInput} = require('./../../../utilities/validations');
 module.exports = {
     Mutation:{
-        register: async (_,{registerUser:{name,email,password,confirmPassword,phone}}) => {
+        register: async (_,{registerUser:{email,password}}) => {
             const encrypted_password = await bcrypt.hash(password,12);
             const user = await User.findOne({email});
             if(user){
@@ -16,14 +16,15 @@ module.exports = {
                     }
                 })
             }
-            const {valid,errors} = validateRegisterInput(name,email,password,confirmPassword,phone);
+            const {valid,errors} = validateRegisterInput(email,password);
             if(!valid){
                 throw new UserInputError("Errors",{errors});
             }
             const newUser = new User({
                 email,
-                name,
-                phone,
+                name:"Please assign a name by clicking on the edit tab",
+                phone: "Please assign a new phone number by clicking on the edit tab",
+                bio:"Please update bio by clicking the edit tab",
                 password: encrypted_password,
                 createdAt: new Date().toISOString()
             });
@@ -73,13 +74,15 @@ module.exports = {
                 token
             };  
         },
-        userupdate: async (_,{updateUserInput:{name,email,bio,phone}},context) =>{
+        userupdate: async (_,{updateUserInput:{name,email,bio,phone,password}},context) =>{
             const user = await authContext(context);
+            var encrypted_password = await bcrypt.hash(password,12);
             const updated_user = await User.findByIdAndUpdate(user._id,{
                 name,
                 email,
                 bio,
-                phone
+                phone,
+                password:encrypted_password
             });
             if(updated_user){
                 return updated_user;
