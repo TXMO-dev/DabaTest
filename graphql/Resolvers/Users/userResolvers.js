@@ -50,9 +50,9 @@ module.exports = {
             var user = await User.findOne({email});
             user.recentlySignedIn = new Date().toISOString();
             await user.save();
-            const {valid,errors} = validateLoginInput(email,password);
+            const {valid,errors} = validateRegisterInput(email,password);
             if(!valid){
-                throw new UserInputError("Errors",{errors});        
+                throw new UserInputError("Errors",{errors});
             }
             if(!user){
                 throw new UserInputError("The credentials could not be validated");
