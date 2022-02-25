@@ -8,11 +8,11 @@
 
 <div align="center">
   <h3>
-    <a href="https://{your-demo-link.your-domain}">
+    <a href="https://wonderful-jackson-4dc1cd.netlify.app/">
       Demo
     </a>
     <span> | </span>
-    <a href="https://{your-url-to-the-solution}">
+    <a href="https://github.com/TXMO-dev/DabaTest}">
       Solution
     </a>
     <span> | </span>
@@ -41,15 +41,17 @@
 
 Introduce your projects by taking a screenshot, video recordings or a gif. Try to tell us about the solution you built by answering the following:
 
-- Where can I see your demo?
-- What was your experience building it.
+- [Demo](https://wonderful-jackson-4dc1cd.netlify.app/)
+- Queries on the frontend were undefined after refreshing the page on the frontend.
+- Had issues with immediately updating after update.
 
 ### Built With
 
 <!-- This section should list any major frameworks that you built your project using. Here are a few examples.-->
 
 - [React](https://reactjs.org/)
-- [Vue.js](https://vuejs.org/)
+- [Framer Motion](https://www.framer.com/motion/)
+- [Flow Bite](https://flowbite.com/)
 - [Tailwind](https://tailwindcss.com/)
 
 ## Features
@@ -57,6 +59,8 @@ Introduce your projects by taking a screenshot, video recordings or a gif. Try t
 <!-- List the features of your application or follow the template. Don't share the figma file here :) -->
 
 What features did you develop?
+- Authentication Updates
+- Updated user information
 
 ## How To Use
 
@@ -72,4 +76,4 @@ $ git clone https://github.com/your-user-name/your-project-name
 $ npm install
 
 # Run the app
-$ np
+$ npm start
