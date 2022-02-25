@@ -35,7 +35,7 @@ module.exports = {
                 email: result.email,
                 phone: result.phone
             },process.env.TOKEN_SECRET,{
-                expiresIn: '1h'
+                expiresIn: '1h'  
             });
             return {
                 ...result._doc,
@@ -76,15 +76,21 @@ module.exports = {
         },
         userupdate: async (_,{updateUserInput:{name,email,bio,phone,password}},context) =>{
             const user = await authContext(context);
-            var encrypted_password = await bcrypt.hash(password,12);
+            
             const updated_user = await User.findByIdAndUpdate(user._id,{
                 name,
                 email,
                 bio,
                 phone,
-                password:encrypted_password
+                password
+                
             });
             if(updated_user){
+                if(password != null){
+                    updated_user.password = await bcrypt.hash(password,12);
+                    updated_user.save();
+                    return updated_user;
+                }
                 return updated_user;
             }
             throw new Error("User could not be able to be updated successfully");  
