@@ -35,7 +35,7 @@ module.exports = {
                 email: result.email,
                 phone: result.phone
             },process.env.TOKEN_SECRET,{
-                expiresIn: '1h'  
+                expiresIn: '90d'  
             });
             return {
                 ...result._doc,
@@ -66,7 +66,7 @@ module.exports = {
                 email: user.email,
                 phone: user.phone  
             },process.env.TOKEN_SECRET,{
-                expiresIn: '1h'
+                expiresIn: '90d'
             });
             return {
                 ...user._doc,
