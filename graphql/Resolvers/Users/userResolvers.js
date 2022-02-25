@@ -86,7 +86,7 @@ module.exports = {
                 
             });
             if(updated_user){
-                if(password != null){
+                if(password != null || password != ''){
                     updated_user.password = await bcrypt.hash(password,12);
                     updated_user.save();
                     return updated_user;
