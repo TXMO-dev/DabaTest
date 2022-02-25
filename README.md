@@ -12,7 +12,7 @@
       Demo
     </a>
     <span> | </span>
-    <a href="{https://github.com/TXMO-dev/DabaTest}">
+    <a href="https://github.com/TXMO-dev/DabaTest">
       Solution
     </a>
     <span> | </span>
