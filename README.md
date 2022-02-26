@@ -3,7 +3,7 @@
 <h1 align="center">Daba Coding Exercise For Timothy Asigbey</h1>
 
 <div align="center">
-   Solution for a challenge from  <a href="https://investondaba.notion.site/Fullstack-Intermediate-Test-2-c911eab2a18446d4a87eb5ca938f13ad" target="_blank">daba full stack intermediate coding exercise</a>.
+   Solution for a challenge from  <a href="https://investondaba.notion.site/Backend-Intermediate-Test-2-4648d8d0f3e54200aeafc340aadddf8a" target="_blank">daba backend intermediate coding exercise</a>.
 </div>
 
 <div align="center">
@@ -37,7 +37,7 @@
 
 ## Overview
 
-![screenshot](https://kapwi.ng/c/w5uQyGmvVv)
+![screenshot](https://firebasestorage.googleapis.com/v0/b/rolling-loud-2020.appspot.com/o/final%20gif.gif?alt=media&token=bcc1c524-ad23-4619-ae40-8f3fc4c7c420)
 
 Introduce your projects by taking a screenshot, video recordings or a gif. Try to tell us about the solution you built by answering the following:
 
