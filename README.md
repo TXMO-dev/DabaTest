@@ -43,8 +43,8 @@ Introduce your projects by taking a screenshot, video recordings or a gif. Try t
 
 - [Walk through of graphql server setup, query and mutations](https://screenrec.com/share/OoDVT197Uz)
 - [Walk through of backend code - models, code structure](https://screenrec.com/share/i15OarPoXA)
-- [Walk through of how i set up the frontent and how I integrated it with the backend](https://screenrec.com/share/Mh5gCFUpLD)
-- [Some of the bugs/issues i faced upon building the frotnend](https://screenrec.com/share/c3T4M5P6QG)
+- [Walk through of how i set up the frontend and how I integrated it with the backend](https://screenrec.com/share/Mh5gCFUpLD)
+- [Some of the bugs/issues I faced upon building the frotnend](https://screenrec.com/share/c3T4M5P6QG)
 - [Walk through the deployment process](https://screenrec.com/share/38AhtQ6ovW)
 
 ### Built With
