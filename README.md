@@ -3,16 +3,16 @@
 <h1 align="center">Daba Coding Exercise For Timothy Asigbey</h1>
 
 <div align="center">
-   Solution for a challenge from  <a href="https://investondaba.notion.site/Fullstack-Intermediate-Test-2-c911eab2a18446d4a87eb5ca938f13ad" target="_blank">daba full stack intermediate coding exercise</a>.
+   Solution for a challenge from  <a href="https://investondaba.notion.site/Backend-Intermediate-Test-2-4648d8d0f3e54200aeafc340aadddf8a" target="_blank">daba backend intermediate coding exercise</a>.
 </div>
 
 <div align="center">
   <h3>
-    <a href="https://{your-demo-link.your-domain}">
+    <a href="https://wonderful-jackson-4dc1cd.netlify.app/">
       Demo
     </a>
     <span> | </span>
-    <a href="https://{your-url-to-the-solution}">
+    <a href="https://github.com/TXMO-dev/DabaTest">
       Solution
     </a>
     <span> | </span>
@@ -37,19 +37,22 @@
 
 ## Overview
 
-![screenshot](https://user-images.githubusercontent.com/16707738/92399059-5716eb00-f132-11ea-8b14-bcacdc8ec97b.png)
+![screenshot](https://firebasestorage.googleapis.com/v0/b/rolling-loud-2020.appspot.com/o/final%20gif.gif?alt=media&token=bcc1c524-ad23-4619-ae40-8f3fc4c7c420)
 
 Introduce your projects by taking a screenshot, video recordings or a gif. Try to tell us about the solution you built by answering the following:
 
-- Where can I see your demo?
-- What was your experience building it.
+- [Walk through of graphql server setup, query and mutations](https://screenrec.com/share/OoDVT197Uz)
+- [Walk through of backend code - models, code structure](https://screenrec.com/share/i15OarPoXA)
+- [Walk through of how i set up the frontent and how I integrated it with the backend](https://screenrec.com/share/Mh5gCFUpLD)
+- [Some of the bugs/issues i faced upon building the frotnend](https://screenrec.com/share/c3T4M5P6QG)
 
 ### Built With
 
 <!-- This section should list any major frameworks that you built your project using. Here are a few examples.-->
 
 - [React](https://reactjs.org/)
-- [Vue.js](https://vuejs.org/)
+- [Framer Motion](https://www.framer.com/motion/)
+- [Flow Bite](https://flowbite.com/)
 - [Tailwind](https://tailwindcss.com/)
 
 ## Features
@@ -57,6 +60,11 @@ Introduce your projects by taking a screenshot, video recordings or a gif. Try t
 <!-- List the features of your application or follow the template. Don't share the figma file here :) -->
 
 What features did you develop?
+- Signup
+- Login
+- Show User information
+- Update User
+- Logout
 
 ## How To Use
 
@@ -72,4 +80,4 @@ $ git clone https://github.com/your-user-name/your-project-name
 $ npm install
 
 # Run the app
-$ np
+$ npm start
